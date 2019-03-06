@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fitness Timer</title>
+  </head>
+  <body>
+    <div id="timer">
+      <div>
+        <h4>Set {{ set_num }}/{{ total_sets }}</h4>
+        <h3>{{ exercise_name }}</h3>
+        <h1>{{ current_minutes }}:{{ current_seconds }}</h1>
+        <button id="start" v-if="!timer" @click="startTimer">Start</button>
+        <button id="stop" v-if="timer" @click="stopTimer">Stop</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="timer.js"></script>
+  </body>
+</html>
